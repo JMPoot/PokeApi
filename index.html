@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon API</title>
+	<link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="ngPokemon" ng-cloak>
+	<div class="wrapper" ng-controller="PokemonCtrl as ctrl">
+		<nav>
+			<md-toolbar class="md-heu-3 paper-shadow-bottom-z-1 paper-shadow-top-z-1" style="position:fixed">
+				<div class="md-toolbar-tools">
+					<h2>
+						<span>PokemonAPI</span>
+					</h2>
+					<span flex></span>
+					<md-input-container layout="center center">
+						<label>Enter Search Term</label>
+						<input type="text" ng-model="pokeFilter">
+					</md-input-container>
+				</div>
+
+			</md-toolbar>
+		</nav>
+
+		<div class="banner">
+
+		</div>
+			<!--ng-controller="PokemonCtrl as ctrl"-->
+		<section ng-controller="PokemonCtrl as ctrl">
+			<md-content layout="row" class="md-padding" layout-align="center" layout-wrap>
+				<md-card flex="25" data-ng-class="{'show-pokemon': ctrl.pokemons, 'pokemon': true}" ng-repeat="pokemon in ctrl.pokemons | filter: pokeFilter track by pokemon.name">
+					<md-card-content>
+						<div>
+							{{ pokemon.name }}
+						</div>
+
+					</md-card-content>
+				</md-card>
+			</md-content>
+
+		</section>
+
+		<footer>
+			<md-grid-list md-cols-xs="3" md-cols-sm="3" md-cols-md="3" md-cols-gt-md="3"
+        				  md-row-height-gt-md="5:3" md-row-height="5:3"
+        				  md-gutter="12px" md-gutter-gt-sm="8px">
+				<md-grid-tile class="green">
+				</md-grid-tile>
+				<md-grid-tile class="red">
+				</md-grid-tile>
+				<md-grid-tile class="blue">
+				</md-grid-tile>
+			</md-grid-list>
+		</footer>
+
+		<script src="node_modules/angular/angular.js"></script>
+		<script src="node_modules/angular-animate/angular-animate.js"></script>
+		<script src="node_modules/angular-aria/angular-aria.js"></script>
+		<script src="node_modules/angular-material/angular-material.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="components/pokemon.ctr.js"></script>
+		<script src="components/pokemon.fac.js"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+[ng-cloak] {
+    display: none;
+}
+
+.pokemon {
+    opacity: 0;
+}
+
+.show-pokemon {
+    opacity: 1;
+     -webkit-transition: opacity 2s ease-in-out;
+     -moz-transition: opacity 2s ease-in-out;
+     -ms-transition: opacity 2s ease-in-out;
+     -o-transition: opacity 2s ease-in-out;
+     transition: opacity 0s ease-in-out;
+}
+
+
+/*Material Design Density Pixels*/
+.paper-shadow-top-z-1 {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.16)
+}
+.paper-shadow-bottom-z-1 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+}
+.paper-shadow-top-z-2 {
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,.19)
+}
+.paper-shadow-bottom-z-2 {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+}
+.paper-shadow-top-z-3 {
+    box-shadow: 0 17px 50px 0 rgba(0,0,0,.19)
+}
+.paper-shadow-bottom-z-3 {
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24)
+}
+.paper-shadow-top-z-4 {
+    box-shadow: 0 25px 55px 0 rgba(0,0,0,.21)
+}
+.paper-shadow-bottom-z-4 {
+    box-shadow: 0 16px 28px 0 rgba(0,0,0,.22)
+}
+.paper-shadow-top-z-5 {
+    box-shadow: 0 40px 77px 0 rgba(0,0,0,.22)
+}
+.paper-shadow-bottom-z-5 {
+    box-shadow: 0 27px 24px 0 rgba(0,0,0,.2)
+}
+
+section {
+    position: relative;
+    top: 60px;
+}
+
+footer {
+    position: relative;
+    top: 60px;
+    min-height: 200px;
+}
+
+md-grid-list {
+    margin: 8px;
+}
+
+.green {
+    background: #b9f6ca;
+}
+
+.red {
+    background: #ff8a80;
+}
+
+.blue {
+    background: #84ffff;
+}

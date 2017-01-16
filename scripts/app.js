@@ -1,0 +1,12 @@
+(function(angular) {
+    "use strict";
+
+    angular.module('ngPokemon', ['ngMaterial'])
+           .config(function($mdThemingProvider) {
+
+                 $mdThemingProvider.theme('default')
+                     .primaryPalette('teal')
+                     .accentPalette('orange');
+                 });
+
+})(window.angular);
